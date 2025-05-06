@@ -16,6 +16,9 @@ export default function Bord() {
   const [xIsNext, setXIsNext] = useState(true);
 
   function handleClick(i) {
+    if (setSquares[i]) {
+      return;
+    }
     const nextSquares = squares.slice();
     if (xIsNext) {
       nextSquares[i] = "X";
