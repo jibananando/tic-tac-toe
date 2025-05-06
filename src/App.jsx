@@ -24,7 +24,7 @@ export default function Bord() {
   }
 
   function handleClick(i) {
-    if (setSquares[i]) {
+    if (setSquares[i] || calculatewinner(squares)) {
       return;
     }
     const nextSquares = squares.slice();
